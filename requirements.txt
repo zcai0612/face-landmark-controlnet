@@ -1,0 +1,6 @@
+diffusers==0.21.0
+mediapipe==0.10.9
+numpy==1.26.2
+Pillow==10.1.0
+Pillow==10.1.0
+torch==2.0.1+cu118

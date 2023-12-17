@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     img_path = "./images/zeyu.png"
     landmark_save_path = "./landmarks/zeyu_lm.png"
-    output_save_path = "./outputs/sample_1.png"
+    output_save_path = "./outputs/sample_2.png"
     # Stable Diffusion 2.1-base:
     controlnet = ControlNetModel.from_pretrained("CrucibleAI/ControlNetMediaPipeFace", torch_dtype=torch.float16, variant="fp16")
     pipe = StableDiffusionControlNetPipeline.from_pretrained(
@@ -22,6 +22,6 @@ if __name__ == "__main__":
 
     face_landmark = load_image(landmark_save_path)
 
-    image = pipe("A superman", image=face_landmark, num_inference_steps=30).images[0]
+    image = pipe("A Hulk", image=face_landmark, num_inference_steps=30).images[0]
     image.save(output_save_path)
     

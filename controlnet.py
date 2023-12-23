@@ -11,6 +11,7 @@ if __name__ == "__main__":
     img_path = "./images/zeyu.png"
     landmark_save_path = "./landmarks/zeyu_lm.png"
     output_save_path = "./outputs/sample_2.png"
+    
     # Stable Diffusion 2.1-base:
     controlnet = ControlNetModel.from_pretrained("CrucibleAI/ControlNetMediaPipeFace", torch_dtype=torch.float16, variant="fp16")
     pipe = StableDiffusionControlNetPipeline.from_pretrained(
